@@ -160,7 +160,8 @@ public class CommonUtils{
 		}
 	}
 	
-	//method creates an XPath locator to find an element on the web page based on its visible text.
+	//method creates an XPath locator to find an element on the web page based 
+	//on its visible text.
 	
 	public static By getCommonLocatorUsingText(String value) throws Exception {
 		By by = null;
@@ -295,10 +296,10 @@ public class CommonUtils{
 	
 	// -------------------- Properties Implementations ----------------------
 	//This method read the a properties file
-	public static Properties readPropertiesFile(String fileName) throws IOException {
-		FileInputStream fis = null;
+	public static Properties readPropertiesFile(String filepath) throws IOException {
+		FileInputStream fis =null;
 		try {
-			fis = new FileInputStream(fileName);
+			 fis = new FileInputStream(filepath);
 			config = new Properties();
 			config.load(fis);
 		} catch (Exception e) {

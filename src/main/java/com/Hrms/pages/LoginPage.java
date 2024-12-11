@@ -25,9 +25,9 @@ public class LoginPage {
 		
 		try {
 			
-			CommonUtils.enterValue(getUsername(), "selenium",true);
+			CommonUtils.enterValue(getUsername(), "seleniumproject",true);
 			
-			CommonUtils.enterValue(getPassword(), "selenium", true);
+			CommonUtils.enterValue(getPassword(), "India@123", true);
 			
 			CommonUtils.clickElement(getSignIn());
 		}catch(Exception e) {

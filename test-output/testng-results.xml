@@ -1,20 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-30T13:42:56 IST" name="Suite" finished-at="2024-09-30T13:42:56 IST" duration-ms="47">
+  <suite started-at="2024-12-05T16:33:07 PST" name="Suite" finished-at="2024-12-05T16:33:20 PST" duration-ms="12768">
     <groups>
-      <group name="Smoke">
-        <method signature="TestPIMPage.viewEmployeeList()[pri:4, instance:com.Hrms.tests.TestPIMPage@13e344d]" name="viewEmployeeList" class="com.Hrms.tests.TestPIMPage"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-09-30T13:42:56 IST" name="Smoke Testing" finished-at="2024-09-30T13:42:56 IST" duration-ms="47">
+    <test started-at="2024-12-05T16:33:07 PST" name="Test" finished-at="2024-12-05T16:33:20 PST" duration-ms="12768">
       <class name="com.Hrms.tests.TestPIMPage">
-        <test-method signature="viewEmployeeList()[pri:4, instance:com.Hrms.tests.TestPIMPage@13e344d]" started-at="2024-09-30T13:42:56 IST" name="viewEmployeeList" description="Verify that the employee list is displayed correctly with accurate information" finished-at="2024-09-30T13:42:56 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Hrms.tests.TestPIMPage@4808bc9b]" started-at="2024-12-05T16:33:07 PST" name="setup" finished-at="2024-12-05T16:33:14 PST" duration-ms="6414" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- viewEmployeeList -->
+        </test-method> <!-- setup -->
+        <test-method signature="addEmployee()[pri:0, instance:com.Hrms.tests.TestPIMPage@4808bc9b]" started-at="2024-12-05T16:33:14 PST" name="addEmployee" description="Verify that an employee can be added successfully" finished-at="2024-12-05T16:33:20 PST" duration-ms="6275" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unable to locate element: //li[text()='Welcome selenium']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e56d878b-67de-4886-9899-00cb61e49c8a, findElement {using=xpath, value=//li[text()='Welcome selenium']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0, moz:accessibilityChecks: false, moz:buildID: 20241121140525, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15536, moz:profile: C:\Users\Suraki\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: e56d878b-67de-4886-9899-00cb61e49c8a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unable to locate element: //li[text()='Welcome selenium']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e56d878b-67de-4886-9899-00cb61e49c8a, findElement {using=xpath, value=//li[text()='Welcome selenium']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0, moz:accessibilityChecks: false, moz:buildID: 20241121140525, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15536, moz:profile: C:\Users\Suraki\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: e56d878b-67de-4886-9899-00cb61e49c8a
+at org.testng.Assert.fail(Assert.java:111)
+at com.Hrms.utils.TestNGUtility.assertFail(TestNGUtility.java:34)
+at com.Hrms.utils.CommonUtils.findElement(CommonUtils.java:75)
+at com.Hrms.utils.CommonUtils.getElementText(CommonUtils.java:205)
+at com.Hrms.tests.TestPIMPage.addEmployee(TestPIMPage.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.Hrms.tests.TestPIMPage@4808bc9b]" started-at="2024-12-05T16:33:20 PST" name="close" finished-at="2024-12-05T16:33:20 PST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
       </class> <!-- com.Hrms.tests.TestPIMPage -->
-    </test> <!-- Smoke Testing -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
